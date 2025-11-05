@@ -1,0 +1,8 @@
+sources:
+  - name: hr_portal
+    catalog: iceberg
+    schema: hr_portal
+    tables:
+      - name: activity_logs
+      - name: employees
+      - name: departments
