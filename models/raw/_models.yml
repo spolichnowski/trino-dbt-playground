@@ -1,0 +1,7 @@
+models:
+  - name: raw_hr_portal__activity_logs
+
+  - name: raw_hr_portal__employees
+
+  - name: raw_hr_portal__departments
+  

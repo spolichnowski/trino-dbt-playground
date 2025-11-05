@@ -1,12 +1,7 @@
-with 
+with final as (select * from {{ source("hr_portal", "departments") }})
 
-final as (
-
-    select * from {{ source('hr_portal', 'departments') }}
-
-)
-
-select * from final
+select *
+from final
 
 {% if is_incremental() %}
 

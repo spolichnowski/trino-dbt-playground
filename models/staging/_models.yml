@@ -1,0 +1,12 @@
+models:
+  - name: stg_hr_portal__activity_logs
+    description: >
+      Captures system events, HR actions, or workflow status changes — effectively modeling HR system audit logs.
+
+  - name: stg_hr_portal__employees
+    description: >
+      Stores key employee information, forming the backbone of the HR dataset.
+
+  - name: stg_hr_portal__departments
+    description: >
+      Defines the organizational structure and hierarchy.

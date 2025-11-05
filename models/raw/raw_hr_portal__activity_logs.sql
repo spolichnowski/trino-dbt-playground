@@ -1,14 +1,10 @@
-with 
+with final as (select * from {{ source("hr_portal", "activity_logs") }})
 
-final as (
+select *
+from final
 
-    select * from {{ source('hr_portal', 'activity_logs') }}
-
-)
-
-select * from final
 {% if is_incremental() %}
 
-where event_timestamp > (select max(event_timestamp) from {{ this }} )
+    where event_timestamp > (select max(event_timestamp) from {{ this }})
 
 {% endif %}

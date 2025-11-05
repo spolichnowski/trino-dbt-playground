@@ -4,6 +4,9 @@
 name: 'hr_portal'
 version: '1.0.0'
 
+flags:
+  require_certificate_validation: True
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'hr_portal'
 
@@ -33,3 +36,5 @@ models:
     # Config indicated by + and applies to all files under models/example/
     raw:
       +materialized: incremental
+    staging: 
+      +materialized: view
